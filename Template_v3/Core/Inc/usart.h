@@ -37,8 +37,8 @@ extern "C" {
 extern UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN Private defines */
-#define UART_RX_BUFF_SIZE 8
-#define UART_TX_BUFF_SIZE 8
+#define UART_RX_BUFF_SIZE 32
+#define UART_TX_BUFF_SIZE 32
 
 struct uart_instance_t
 {

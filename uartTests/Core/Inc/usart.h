@@ -36,9 +36,11 @@ extern "C" {
 
 extern UART_HandleTypeDef huart2;
 
+extern UART_HandleTypeDef huart3;
+
 /* USER CODE BEGIN Private defines */
 #define UART_RX_BUFF_SIZE 32
-#define UART_TX_BUFF_SIZE 32
+#define UART_TX_BUFF_SIZE 320
 
 struct uart_instance_t
 {
@@ -54,10 +56,12 @@ struct uart_instance_t
 };
 
 extern struct uart_instance_t uart_instance2;
+extern struct uart_instance_t uart_instance3;
 
 /* USER CODE END Private defines */
 
 void MX_USART2_UART_Init(void);
+void MX_USART3_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 
@@ -66,6 +70,7 @@ void MX_USART2_UART_Init(void);
 void uart_InstanceInit(struct uart_instance_t* uart);
 
 /*** READ/WRITE ***/
+
 void uart_WriteTx(struct uart_instance_t* uart, char* input_str);
 
 char* uart_ReadRx(struct uart_instance_t* uart, char* output_string);
